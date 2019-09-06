@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bg-80{
+    background-image: url("/assets/images/80s-background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.cursor-80{
+    cursor: url('/assets/icons/mouse-cursor.svg') , pointer;
+}
+
+
+.transition-opacity{
+    transition: opacity 250ms ease-in;
+}
+
+
+.star-wars-text{
+    /* transform: perspective(300px) rotateX(20deg); */
+}
+
+.label-language{
+    @apply py-1 px-2 inline-block rounded-full ml-2 mt-2
+}
+
+.skills-list{
+    @apply list-none pl-5 text-lg;
+}
+.skills-list > li {
+    @apply mt-4;
+    position: relative;
+}
+.skills-list  li  span{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+.skills-list  li  span::after{
+    z-index: -1;
+    content: '';
+    left:5px;
+    right:-5px;
+    bottom:0;
+    opacity: .5;
+    height:15px;
+    position: absolute;
+    @apply bg-red-500;
+}
+
+.death-star{
+    transform: translateZ(0);
+    animation: deathStar 3s ease-in infinite;
+}
+@keyframes deathStar {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.death-star-container{
+    left:-200px;
+    bottom:-200px;
+    @apply absolute left-0 bottom-0 text-gray-800 mx-auto text-center;
+    z-index: -1;
+}
+/* .death-star-container{
+    animation: traverse 45s ease-in infinite;
+}
+@keyframes traverse {
+    0%{
+        transform: translateX(0px)
+    }
+    50%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+} */
