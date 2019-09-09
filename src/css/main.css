@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.bg-body{
+    background: #1A1A1A;
+}
 .bg-80{
     background-image: url("/assets/images/80s-background.jpg");
     background-position: center;
