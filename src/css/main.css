@@ -26,6 +26,9 @@
     cursor: url('/assets/icons/mouse-cursor.svg') , pointer;
 }
 
+.header-name{
+    font-size:96px;
+}
 
 .transition-opacity{
     transition: opacity 250ms ease-in;

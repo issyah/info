@@ -83,8 +83,10 @@ new Vue({
                 let offsetHeight = dom.offsetHeight + dom.offsetTop;
                 if(this.scroll > offsetHeight && window.outerWidth >= 768){
                     let diff = this.scroll - offsetHeight;
-                    return `translateY(-${diff * factor}px)`
-
+                    return `translateY(-${diff * factor}px)`;
+                }else if(this.scroll < offsetHeight && window.outerWidth >= 768){
+                    let diff = offsetHeight - this.scroll;
+                    return `translateY(${diff*factor}px)`;
                 }
             }
             // if(window.outerWidth >= 768){

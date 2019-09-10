@@ -1,6 +1,6 @@
 <template>
     <div class="mt-4 text-gray-200">
-        <span class="bg-green-200 text-green-700 font-bold label-language" v-for="(label, index) in labels">{{label}}</span>
+        <span class="bg-gray-200 text-gray-900 label-language" v-for="(label, index) in labels">{{label}}</span>
     </div>
 </template>
 <script>
