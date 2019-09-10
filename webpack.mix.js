@@ -35,6 +35,19 @@ let postCss = [
 //     })
 // }
 
+if(mix.inProduction()){
+    mix.options({
+        uglify:{
+            uglifyOptions:{
+                comments:false,
+                compress:{
+                    drop_console: true
+                }
+            }            
+        }
+    })
+}
+
 
 mix.setPublicPath('/');
 

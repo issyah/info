@@ -1,4 +1,3 @@
-# laravelMix-sass-tailwind
-A set up and go framework for quickly working on new project
+# Personal Site
 
-## To copy extra stuff here 
+Personal profile page built with tailwindcss and Vue.js
