@@ -76,9 +76,25 @@ new Vue({
         },
         setBackground(e){
             this.background80 = (!e) ? 'bg-80' : ''
+        },
+        setParallexDepth(factor,e){
+            let dom = this.$refs[e];
+            if(dom){
+                let offsetHeight = dom.offsetHeight + dom.offsetTop;
+                console.dir(dom);
+                if(this.scroll > offsetHeight && window.outerWidth >= 768){
+                    let diff = this.scroll - offsetHeight;
+                    return `translateY(-${diff * factor}px)`
+
+                }
+            }
+            // if(window.outerWidth >= 768){
+            //     return `translateY(-${this.scroll* factor}px)`
+            // }
         }
     },
-    mounted() {},
+    mounted() {
+    },
     created() {
         window.addEventListener('scroll', this.handleScroll);
     }

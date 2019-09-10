@@ -6,6 +6,17 @@
     background: #1A1A1A;
 }
 .bg-80{
+    position: relative;
+}
+.bg-80::before{
+    z-index: -1;
+    opacity: 0.1;
+    position: absolute;
+    content:'';
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
     background-image: url("/assets/images/80s-background.jpg");
     background-position: center;
     background-size: cover;
@@ -19,7 +30,6 @@
 .transition-opacity{
     transition: opacity 250ms ease-in;
 }
-
 
 .star-wars-text{
     /* transform: perspective(300px) rotateX(20deg); */

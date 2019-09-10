@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <div class="relative w-9/12 md:w-2/3 mx-auto relative">
-            <img :src="imageUrl" alt="DP" class="rounded-full h-full w-full object-cover"/>
-            <img :src="imageUrlHover" alt="DP" class="top-0 absolute rounded-full h-full w-full object-cover transition-opacity" :class="hoverImgOpacity"/>
+    <div class="w-9/12  md:w-5/6 mx-auto">
+        <div class="relative rounded-lg overflow-hidden" :style="{transform:getTransformsOffset}">
+            <img :src="imageUrl" alt="DP" class=" h-full w-full object-cover"/>
+            <img :src="imageUrlHover" alt="DP" class="top-0 absolute h-full w-full object-cover transition-opacity" :class="hoverImgOpacity"/>
         </div>
         <div class="px-3 -mt-12 relative">
-            <div class="p-5 text-left bg-gray-800 shadow-lg">
+            <div class="p-5 text-left bg-gray-800 rounded-lg shadow-lg" :style="{transform: getTransforms}">
                 <h2 class="text-gray-200 font-normal text-xl">
                     <div class="mt-2">
                         I am mad in love with <span class="font-mono text-sm inline-block text-purple-300 border-purple-500 mborder-b-2 p-1" @mouseover="toggleDp" @mouseout="toggleDp">80s Synthwave music</span> and a huge <span class="font-mono text-yellow-400 bg-gray-900 text-sm inline-block p-1 rounded-full">Star Wars</span> nerd.
@@ -17,7 +17,7 @@
                         </a>
                     </div>
                     <div class="mt-2">
-                        <span class="font-bold text-sm"><span class="text-orange-500">Warning</span>: May spontaneously get time-travelled</span>
+                        <span class="font-bold text-sm"><span class="text-orange-500">Warning:</span> May spontaneously get time-travelled</span>
                     </div>
                 </h2>
             </div>
@@ -34,6 +34,9 @@
         computed:{
             getTransforms(){
                 return `translate(${this.x}px, ${this.y}px)`
+            },
+            getTransformsOffset(){
+                return `translate(${-this.x}px, -${-this.y}px)`
             }
         },
         props:{
