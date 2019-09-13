@@ -1,3 +1,3 @@
-# Personal Site
+# Development Build for issyah.github.io
 
-Personal profile page built with tailwindcss and Vue.js
+The development version for issyah.github.io build. Built on nuxt.js
