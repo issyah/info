@@ -23,7 +23,7 @@
     </nav>
 </template>
 <script>
-    export default ({
+    export default {
         data:() => ({
 
         }),
@@ -31,7 +31,7 @@
         mounted(){
 
         }
-    })
+    }
 </script>
 <style>
     ul.nav-link{
