@@ -1,3 +1,3 @@
-# Personal Page for Issyah
+# Development Build for issyah.github.io
 
-The dist version of issyah.github.com . Built by Nuxt.js
+The development version for issyah.github.io build. Built on nuxt.js
